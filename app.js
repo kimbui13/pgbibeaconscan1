@@ -36,6 +36,9 @@ var app = (function()
 
 		if( cordova.plugins ) {
 			$('#consolelog').append($('<p>cordova.plugins</p>'));
+			if( cordova.plugins.locationManager	) {
+				$('#consolelog').append($('<p>cordova.plugins.locationManager</p>'));
+			}		
 		} 
 		/*
 		if( phonegap.plugins ) {
