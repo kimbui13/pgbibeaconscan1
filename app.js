@@ -128,7 +128,7 @@ var app = (function()
 
 	function displayBeaconList()
 	{
-		$('#consolelog').append($('<p>Refresh ' + new Date() + '</p>'));
+		$('#consolelog').html($('<p>Refresh ' + new Date() + '</p>'));
 
 		// Clear beacon list.
 		$('#found-beacons').empty();
