@@ -32,36 +32,30 @@ var app = (function()
 		$('#consolelog').append($('<p>Device is Ready</p>'));
 
 		// Specify a shortcut for the location manager holding the iBeacon functions.
-		// window.locationManager = cordova.plugins.locationManager;
+		window.locationManager = cordova.plugins.locationManager;
 
 		if( cordova.plugins ) {
 			$('#consolelog').append($('<p>cordova.plugins</p>'));
 			if( cordova.plugins.locationManager	) {
 				$('#consolelog').append($('<p>cordova.plugins.locationManager</p>'));
+				
+				// Specify a shortcut for the location manager holding the iBeacon functions.
+				window.locationManager = cordova.plugins.locationManager;
+				$('#consolelog').append($('<p>Timeout Done</p>'));
+				
+
+				// Start tracking beacons!
+				// startScan();
+
+				$('#consolelog').append($('<p>After start scan</p>'));
+
 			}		
 		} 
-		/*
-		if( phonegap.plugins ) {
-			$('#consolelog').append($('<p>phonegap.plugins</p>'));
-		} 
-		*/
 
-		setTimeout( function(){
-			$('#consolelog').append($('<p>Timeout Done</p>'));
-			
-
-			// Start tracking beacons!
-			// startScan();
-
-			$('#consolelog').append($('<p>After start scan</p>'));
-
-			setInterval( function(){
-				$('#consolelog').append($('<p>' + new Date() + '</p>'));
-			}, 1000);
-
-			// Display refresh timer.
-			// updateTimer = setInterval(displayBeaconList, 500);
-		}, 500);
+		// updateTimer = setInterval(displayBeaconList, 500);
+		setInterval( function(){
+			$('#consolelog').append($('<p>' + new Date() + '</p>'));
+		}, 1000);
 
 	}
 
