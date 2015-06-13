@@ -32,7 +32,7 @@ var app = (function()
 		$('#consolelog').append($('<p>Device is Ready</p>'));
 
 		// Specify a shortcut for the location manager holding the iBeacon functions.
-		// window.locationManager = cordova.plugins.locationManager;
+		window.locationManager = cordova.plugins.locationManager;
 
 		setTimeout( function(){
 			$('#consolelog').append($('<p>Timeout Done</p>'));
@@ -113,6 +113,8 @@ var app = (function()
 
 	function displayBeaconList()
 	{
+		$('#consolelog').append($('<p>Refresh ' + Date.now() + '</p>'));
+
 		// Clear beacon list.
 		$('#found-beacons').empty();
 
