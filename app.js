@@ -44,11 +44,12 @@ var app = (function()
 			$('#consolelog').append($('<p>After start scan</p>'));
 
 			// Display refresh timer.
-			updateTimer = setInterval(displayBeaconList, 500);
+			// updateTimer = setInterval(displayBeaconList, 500);
 		}, 500);
 
 	}
 
+/*
 	function startScan()
 	{
 		// The delegate object holds the iBeacon callback functions
@@ -149,7 +150,7 @@ var app = (function()
 			}
 		});
 	}
-
+*/
 	return app;
 })();
 
