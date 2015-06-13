@@ -52,12 +52,14 @@ var app = (function()
 			}		
 		} 
 
-		// updateTimer = setInterval(displayBeaconList, 500);
+		updateTimer = setInterval(displayBeaconList, 500);
+		/*
 		setInterval( function(){
 			$('#consolelog').append($('<p>' + new Date() + 
 				JSON.stringify(beacons) + 
 				'</p>'));
 		}, 1000);
+		*/
 
 	}
 
@@ -126,7 +128,7 @@ var app = (function()
 
 	function displayBeaconList()
 	{
-		$('#consolelog').append($('<p>Refresh ' + Date.now() + '</p>'));
+		$('#consolelog').append($('<p>Refresh ' + new Date() + '</p>'));
 
 		// Clear beacon list.
 		$('#found-beacons').empty();
