@@ -43,6 +43,10 @@ var app = (function()
 
 			$('#consolelog').append($('<p>After start scan</p>'));
 
+			setInterval( function(){
+				$('#consolelog').append($('<p>' + new Date() + '</p>'));
+			}, 1000);
+
 			// Display refresh timer.
 			// updateTimer = setInterval(displayBeaconList, 500);
 		}, 500);
