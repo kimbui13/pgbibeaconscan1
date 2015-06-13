@@ -34,9 +34,8 @@ var app = (function()
 		// Specify a shortcut for the location manager holding the iBeacon functions.
 		// window.locationManager = cordova.plugins.locationManager;
 
-		/*
 		setTimeout( function(){
-			$('#fconsolelog').append($('<p>Timeout Done</p>'));
+			$('#consolelog').append($('<p>Timeout Done</p>'));
 			
 
 			// Start tracking beacons!
@@ -47,7 +46,6 @@ var app = (function()
 			// Display refresh timer.
 			updateTimer = setInterval(displayBeaconList, 500);
 		}, 500);
-		*/
 
 	}
 
