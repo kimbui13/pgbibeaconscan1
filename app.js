@@ -38,14 +38,14 @@ var app = (function()
 			$('#consolelog').append($('<p>cordova.plugins</p>'));
 			if( cordova.plugins.locationManager	) {
 				$('#consolelog').append($('<p>cordova.plugins.locationManager</p>'));
-				
+
 				// Specify a shortcut for the location manager holding the iBeacon functions.
 				window.locationManager = cordova.plugins.locationManager;
 				$('#consolelog').append($('<p>Timeout Done</p>'));
 				
 
 				// Start tracking beacons!
-				// startScan();
+				startScan();
 
 				$('#consolelog').append($('<p>After start scan</p>'));
 
@@ -54,12 +54,14 @@ var app = (function()
 
 		// updateTimer = setInterval(displayBeaconList, 500);
 		setInterval( function(){
-			$('#consolelog').append($('<p>' + new Date() + '</p>'));
+			$('#consolelog').append($('<p>' + new Date() + 
+				JSON.stringify(beacons) + 
+				'</p>'));
 		}, 1000);
 
 	}
 
-/*
+
 	function startScan()
 	{
 		// The delegate object holds the iBeacon callback functions
@@ -160,7 +162,7 @@ var app = (function()
 			}
 		});
 	}
-*/
+
 	return app;
 })();
 
