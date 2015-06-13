@@ -6,22 +6,22 @@
         id        = "com.kimbui.ibeaconscan"
         version   = "0.0.1">
 
-    <name>Hello World</name>
+    <name>iBeacon Scan</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Scans iBeacons
     </description>
 
     <author href="https://github.com/kimbui13" email="kim.bui.perso@gmail.com">
-        PhoneGap Team
+        Kim Bui
     </author>
 
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
-    -->
     <preference name="permissions"                value="none"/>
+    -->
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
