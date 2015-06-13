@@ -36,7 +36,7 @@ var app = (function()
 		if( cordova.plugins ) {
 			$('#consolelog').append($('<p>cordova.plugins</p>'));
 		} 
-		if( phonega.plugins ) {
+		if( phonegap.plugins ) {
 			$('#consolelog').append($('<p>phonegap.plugins</p>'));
 		} 
 
