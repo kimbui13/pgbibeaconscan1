@@ -33,6 +33,12 @@ var app = (function()
 
 		// Specify a shortcut for the location manager holding the iBeacon functions.
 		// window.locationManager = cordova.plugins.locationManager;
+		if( cordova.plugins ) {
+			$('#consolelog').append($('<p>cordova.plugins</p>'));
+		} 
+		if( phonega.plugins ) {
+			$('#consolelog').append($('<p>phonegap.plugins</p>'));
+		} 
 
 		setTimeout( function(){
 			$('#consolelog').append($('<p>Timeout Done</p>'));
