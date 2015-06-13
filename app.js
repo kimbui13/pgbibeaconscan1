@@ -143,7 +143,7 @@ var app = (function()
 			{
 				// Map the RSSI value to a width in percent for the indicator.
 				var rssiWidth = 1; // Used when RSSI is zero or greater.
-				if (beacon.rssi < -100) { rssiWidth = 100; }
+				if (beacon.rssi < -100) { rssiWidth = 1; }
 				else if (beacon.rssi < 0) { rssiWidth = 100 + beacon.rssi; }
 
 				// Create tag to display beacon data.
